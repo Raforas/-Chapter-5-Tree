@@ -1,29 +1,25 @@
 package pmain;
 import java.util.*;
-import pmember.*;
 
-class main extends LoginUsrPwd {
+import pProcess.*;
+import pcustomer.*;
+
+class main extends Member {
 
     static  Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
-      LoginUsrPwd obj = new LoginUsrPwd();
+
+        Member obj = new Member();
+      NotMember obj2=  new NotMember(); 
 
 
-        System.out.print("Are you a member? [y/n]:");
-        char opt = scan.next().charAt(0);
-            switch (opt) {
-            case 'y' :
-
-                obj.EnterUsrPwd();
-
-            break;
-            case 'n' :
-                    System.out.println("nice");
-            break;
-            default:
-            System.out.println("Wrong Input.");
-            break;
-
-        }
-    }
-}
+      System.out.println("\nAre you a member?\n\n  1.Member\n  2.Not a member ");
+        System.out.print("\nOperation :");
+        int opt = scan.nextInt();
+        switch (opt) {
+            case 1:obj.EnterUsrPwd();break;
+            case 2 : obj2.Normal_Sell();break;
+            default:System.out.println("Wrong Input.");break;
+        }//switch curly        
+    }//main method curly
+}//class curly

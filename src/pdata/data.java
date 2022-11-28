@@ -1,14 +1,15 @@
 package pdata;
 
 
-abstract class data {
-    	//declare variables
+public interface Data {
+    	//declare variables in display
 
-
-        //REFER LAB 2 for data discount of member
-	public String nama;
-	public int price;
-	public double gaji;
-	
+		abstract void display_data();
+		abstract void calculation1();
+		abstract void calculation2();
+		abstract void Exit();
+		
 }
+
+
 
